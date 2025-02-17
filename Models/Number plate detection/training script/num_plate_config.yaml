@@ -1,0 +1,6 @@
+path: C:/Users/arjun/Desktop/Jupyter Notebook/Number plate detection/License Plate dataset
+train: images/train
+val: images/train
+
+names:
+  0: licence
