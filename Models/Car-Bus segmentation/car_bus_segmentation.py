@@ -5,13 +5,14 @@ import numpy as np
 
 # Load the pre-trained YOLOv8 segmentation model trained on COCO dataset
 model = YOLO("yolov8n-seg.pt")
+#model = YOLO("yolo11m-seg.pt")
 
-image_path = "Models/Car-Bus segmentation/sample images/traffic1.jpg"
+image_path = "Models/Car-Bus segmentation/sample images/traffic4.jpg"
 image = cv2.imread(image_path)
 height, width = image.shape[:2]
 new_width = width // 2
 new_height = height // 2
-image = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_AREA)
+#image = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_AREA)
 
 results = model(image)
 
